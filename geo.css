@@ -1,0 +1,156 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: hsl(0, 0%, 85%);
+    font-family: "Noto Serif", serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: hsl(0, 0%, 95%);
+    align-items: center;
+    border-bottom: 6px solid hsl(355, 47%, 37%);
+}
+
+.headerBtn{
+    text-decoration: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: hsl(0, 2%, 20%);
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav_link,
+.nav_link:focus
+{
+    position: relative;
+    transition: all 0.4s;
+}
+
+.nav_link:hover{
+    color: hsla(0, 0%, 100%, 0.705);
+}
+
+.nav_link::after{
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: hsl(209, 88%, 60%);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    opacity: 0;
+    transition: all 0.4s;
+    pointer-events: none;
+}
+
+.nav_link:hover::after,
+.nav_link:focus::after{
+    opacity: 1;
+}
+/*Header sec*/
+
+/*Card*/
+
+.footer{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cityDisplay, .tempDisplay{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.534);
+    margin-bottom: 25px;
+}
+
+.cityInput{
+    background-color: hsl(197, 100%, 50%);
+    padding: 10px;
+    width: 300px;
+    border: 2px solid hsla(229, 73%, 54%, 0.829);
+    border-radius: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.descDisplay{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.humidityDisplay{
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.weatherEmoji{
+    margin: 0;
+    font-size: 7.5rem;
+}
+
+.errorDisplay{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.514);
+    pointer-events: all;        /* check pointer event */
+}
+
+.card{
+    background: linear-gradient(180deg, hsl(240, 100%, 70%), hsl(60, 100%, 90%));
+    padding: 55px;
+    box-shadow: 3px 3px 5px hsla(0, 0%, 10%, 0.596);
+    min-width: 300px;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    border-radius: 20px;
+/*    margin-right: 100vh;
+    margin-left: 100vh;*/
+}
+
+.main{
+    margin-top: 2%;
+    margin-left: 43%;
+    margin-right: auto;
+}
+
+#formBtn{
+    display: none;
+}
+
+.troll{
+    display: flex;
+    align-items: center;
+    margin-left: 200vh;
+    padding: 0 40px;
+    margin-bottom: 50vh;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px red;
+    min-width: 200px;
+}
+
+@media screen and (max-width: 600px)
+{
+    .headerBtn{
+        font-size: 1rem;
+    }
+    .main{
+        margin-top: 5%;
+        margin-left: 23%;
+    }
+    .troll{
+        margin-top: 10%;
+        margin-left: -5vh;
+    }
+}

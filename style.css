@@ -1,0 +1,84 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: hsl(0, 0%, 85%);
+    font-family: "Noto Serif", serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: hsl(0, 0%, 95%);
+    align-items: center;
+    border-bottom: 6px solid hsl(355, 47%, 37%);
+}
+
+.headerBtn{
+    text-decoration: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: hsl(0, 2%, 20%);
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav_link,
+.nav_link:focus
+{
+    position: relative;
+    transition: all 0.4s;
+}
+
+.nav_link:hover{
+    color: hsla(0, 0%, 100%, 0.705);
+}
+
+.nav_link::after{
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: hsl(209, 88%, 60%);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    opacity: 0;
+    transition: all 0.4s;
+    pointer-events: none;
+}
+
+.nav_link:hover::after,
+.nav_link:focus::after{
+    opacity: 1;
+}
+/*Header sec*/
+
+/*Card*/
+
+
+.main{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    margin-top: 3%;
+}
+
+img{
+    display: flex;
+    margin-right: 90vh;
+    margin-top: 55px;
+}
+
+@media screen and (max-width: 600px)
+{
+    .headerBtn{
+        font-size: 1rem;
+    }
+    .main{
+        margin-right: 80vh;
+    }
+}
